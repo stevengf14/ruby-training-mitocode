@@ -3,7 +3,9 @@ class MyClass
     end
 
     def show()
-        puts "Ruby course mitocode"
+        x = "Ruby course mitocode\n"
+        y = 2
+        puts x*y
     end
 end
 
