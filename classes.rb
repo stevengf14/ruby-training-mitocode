@@ -54,11 +54,19 @@ class MyClass
         x = x.to_f
         puts x
     end
+
+    def hello()
+        x = gets().chomp()
+        puts x
+    end
 end
 
 myClass = MyClass.new()
+=begin
 myClass.show()
 myClass.goToWork()
 puts myClass.haveYouLearned
 puts myClass.duplicateValue(5)
 myClass.convert()
+=end
+myClass.hello()
