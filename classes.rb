@@ -86,6 +86,34 @@ class MyClass
             puts "Other number"
         end
     end
+
+    def array()
+        y = "ruby"
+        z = [23, 24]
+        x = [5, 1, 4, "eight", true, y, z]
+        puts "x: " 
+        puts x
+        print "x[3]: " 
+        puts x[3]
+        print "x[-2]: " 
+        puts x[-2] 
+        print "length: " 
+        puts x.length
+
+        array = [5, 7, 23, -2]
+        array2 = [5, 6, 7]
+
+        array2.push(8)
+        array.each do |a|
+            puts a 
+        end
+        puts array.sort
+        puts array.length
+        puts array.first
+        puts array.last
+
+        puts array2 - array
+    end
 end
 
 myClass = MyClass.new()
@@ -96,5 +124,6 @@ puts myClass.haveYouLearned
 puts myClass.duplicateValue(5)
 myClass.convert()
 myClass.hello()
-=end
 myClass.evaluate()
+=end
+myClass.array()
