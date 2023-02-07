@@ -59,6 +59,33 @@ class MyClass
         x = gets().chomp()
         puts x
     end
+
+    # Conditionals
+    def evaluate()
+        # >= <= >< !=
+        puts "Insert your age"
+        x = gets().chomp.to_f
+        if x > 18
+            puts "I'm old"
+        elsif x == 18
+            puts "I'm not old neither young"
+        else
+            puts "I'm young"
+        end
+
+        puts "Insert your number (1-3)"
+        x = gets.chomp.to_f
+        case x 
+        when 1 
+            puts "Number 1"
+        when 2 
+            puts "Number 2"
+        when 3 
+            puts "Number 3"
+        else 
+            puts "Other number"
+        end
+    end
 end
 
 myClass = MyClass.new()
@@ -68,5 +95,6 @@ myClass.goToWork()
 puts myClass.haveYouLearned
 puts myClass.duplicateValue(5)
 myClass.convert()
-=end
 myClass.hello()
+=end
+myClass.evaluate()
