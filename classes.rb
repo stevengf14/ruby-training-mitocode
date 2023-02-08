@@ -87,6 +87,7 @@ class MyClass
         end
     end
 
+    # arrays
     def array()
         y = "ruby"
         z = [23, 24]
@@ -114,6 +115,23 @@ class MyClass
 
         puts array2 - array
     end
+
+    # unless
+    def colors()
+        color = "White"
+        unless color == "Black"
+            puts "It's not a good color"
+        end
+    end
+
+    def players()
+        player = "Neymar"
+        event = "pool"
+
+        unless player == "Neymar" and event == "pool"
+            puts "Yellow card"
+        end
+    end
 end
 
 myClass = MyClass.new()
@@ -125,5 +143,7 @@ puts myClass.duplicateValue(5)
 myClass.convert()
 myClass.hello()
 myClass.evaluate()
-=end
 myClass.array()
+myClass.colors()
+=end
+myClass.players()
