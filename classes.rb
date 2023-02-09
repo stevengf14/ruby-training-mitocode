@@ -132,6 +132,37 @@ class MyClass
             puts "Yellow card"
         end
     end
+
+    # for 
+    def forAddition()
+        result = 0
+        for i in 0..9
+            if i == 3
+                next
+                # break -> interrupt for
+                # redo -> repeat loop until the end
+            end
+            result += i
+        end
+        puts result
+    end
+
+    # while
+    def while()
+        x = (1..10).to_a
+        while x.length > 0
+            x.delete_at(-1)
+            puts x.length
+        end
+        puts x
+
+        i = 0
+        begin 
+            i += 1
+            puts i
+        end while i<5
+    end
+
 end
 
 myClass = MyClass.new()
@@ -145,5 +176,7 @@ myClass.hello()
 myClass.evaluate()
 myClass.array()
 myClass.colors()
-=end
 myClass.players()
+myClass.forAddition()
+=end
+myClass.while()
