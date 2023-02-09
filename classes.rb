@@ -163,6 +163,22 @@ class MyClass
         end while i<5
     end
 
+    # until
+    def until()
+        i = 0
+        until i > 5 do
+            puts "Printing #{i}"
+            i += 1
+        end
+
+        i = 0
+        # puts "Printing" until i > 5
+
+        begin
+            puts "Printing #{i}"
+            i += 1
+        end until i > 5
+    end
 end
 
 myClass = MyClass.new()
@@ -178,5 +194,6 @@ myClass.array()
 myClass.colors()
 myClass.players()
 myClass.forAddition()
-=end
 myClass.while()
+=end
+myClass.until()
