@@ -33,7 +33,7 @@ class MyClass
         return number*2
     end
 
-    def convert()
+    def method_convert()
         # to string
         x = 1
         x = x.to_s
@@ -61,7 +61,7 @@ class MyClass
     end
 
     # Conditionals
-    def evaluate()
+    def method_conditionals()
         # >= <= >< !=
         puts "Insert your age"
         x = gets().chomp.to_f
@@ -88,7 +88,7 @@ class MyClass
     end
 
     # arrays
-    def array()
+    def method_arrays()
         y = "ruby"
         z = [23, 24]
         x = [5, 1, 4, "eight", true, y, z]
@@ -117,14 +117,14 @@ class MyClass
     end
 
     # unless
-    def colors()
+    def method_unless_colors()
         color = "White"
         unless color == "Black"
             puts "It's not a good color"
         end
     end
 
-    def players()
+    def method_unless_players()
         player = "Neymar"
         event = "pool"
 
@@ -134,7 +134,7 @@ class MyClass
     end
 
     # for 
-    def forAddition()
+    def method_for()
         result = 0
         for i in 0..9
             if i == 3
@@ -148,7 +148,7 @@ class MyClass
     end
 
     # while
-    def while()
+    def method_while()
         x = (1..10).to_a
         while x.length > 0
             x.delete_at(-1)
@@ -164,7 +164,7 @@ class MyClass
     end
 
     # until
-    def until()
+    def method_until()
         i = 0
         until i > 5 do
             puts "Printing #{i}"
@@ -179,21 +179,23 @@ class MyClass
             i += 1
         end until i > 5
     end
+
+    # times
+    def method_times()
+        x = 3
+        x.times do
+            puts "Ryby course"
+        end
+    end
+
+    # each
+    def method_each()
+        social_networks = ["www.facebook.com/mitocode", "www.youtube.com/mitocode", "www.twitter.com/mitocode"]
+        social_networks.each do |sn|
+            puts sn
+        end
+    end
 end
 
 myClass = MyClass.new()
-=begin
-myClass.show()
-myClass.goToWork()
-puts myClass.haveYouLearned
-puts myClass.duplicateValue(5)
-myClass.convert()
-myClass.hello()
-myClass.evaluate()
-myClass.array()
-myClass.colors()
-myClass.players()
-myClass.forAddition()
-myClass.while()
-=end
-myClass.until()
+myClass.method_each()
