@@ -195,7 +195,18 @@ class MyClass
             puts sn
         end
     end
+
+    # block
+    def method_block()
+        puts "This is before get the code (block)"
+        yield 5
+        puts "This is after get the code (block)"
+    end
+
+    def method_send_block()
+        method_block{|i| puts "I'm a block #{i}"}
+    end
 end
 
 myClass = MyClass.new()
-myClass.method_each()
+myClass.method_send_block()
