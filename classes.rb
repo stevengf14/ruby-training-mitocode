@@ -206,7 +206,20 @@ class MyClass
     def method_send_block()
         method_block{|i| puts "I'm a block #{i}"}
     end
+
+    # lambda
+    def method_lambda()
+        lmd = lambda do |var|
+            if(var == true)
+                return "It's true"
+            else 
+                return "It's false"
+            end
+        end
+        puts lmd.call(false)
+        
+    end
 end
 
 myClass = MyClass.new()
-myClass.method_send_block()
+myClass.method_lambda()
