@@ -219,7 +219,16 @@ class MyClass
         puts lmd.call(false)
         
     end
+
+    # procedures
+    def method_procedures(procedure)
+        puts " Welcome to MitoCode"
+        procedure.call("yes")
+    end
 end
 
 myClass = MyClass.new()
-myClass.method_lambda()
+my_proc = proc do |x|
+    puts "Are you great? #{x}"
+end
+myClass.method_procedures(my_proc)
