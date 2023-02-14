@@ -221,9 +221,18 @@ class MyClass
     end
 
     # procedures
-    def method_procedures(procedure)
+    def method_procedure(procedure)
         puts " Welcome to MitoCode"
         procedure.call("yes")
+    end
+
+    # hashes
+    def method_hash()
+        h = Hash["facebook" => "like", "youtube" => "more likes"]
+        puts h
+        puts h.invert
+        puts h.key?("twitter")
+        puts h.has_value?("twitter")
     end
 end
 
@@ -231,4 +240,4 @@ myClass = MyClass.new()
 my_proc = proc do |x|
     puts "Are you great? #{x}"
 end
-myClass.method_procedures(my_proc)
+myClass.method_hash()
