@@ -234,10 +234,36 @@ class MyClass
         puts h.key?("twitter")
         puts h.has_value?("twitter")
     end
+
+    # date time
+    def method_date_time()
+        t = Time.new
+        puts t
+        puts t.year
+        puts t.month
+        puts t.day
+        puts t.wday
+        puts t.yday
+        puts t.hour
+        puts t.min
+        puts t.sec
+        puts t.usec
+        puts t.zone
+
+        array = t.to_a
+        puts array
+
+        puts t.strftime("%d-%m-%Y")
+
+        before = t - 10
+        puts t
+        puts before
+        puts t - before
+    end
 end
 
 myClass = MyClass.new()
 my_proc = proc do |x|
     puts "Are you great? #{x}"
 end
-myClass.method_hash()
+myClass.method_date_time()
