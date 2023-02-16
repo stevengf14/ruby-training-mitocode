@@ -40,3 +40,27 @@ phone3 = Phone.new("Motorola", "Black")
 phone3.model = "Nokia 1100"
 phone3.color = "White"
 phone3.call()
+
+class SmartPhone < Phone
+
+    attr_accessor :camera, :memory, :isTouch
+
+    def initialize()
+    end
+
+    def install_app()
+        puts "Installing a new app"
+    end
+
+    def uninstall_app()
+        puts "Uninstalling app"
+    end
+
+end
+
+smartPhone1 = SmartPhone.new()
+smartPhone1.model = "Huawei 12"
+smartPhone1.color = "Blue"
+smartPhone1.call();
+smartPhone1.install_app();
+smartPhone1.uninstall_app();
