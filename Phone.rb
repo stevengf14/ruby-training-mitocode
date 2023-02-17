@@ -86,7 +86,15 @@ class Phone
     def message()
         puts "Sending a message"
     end
+
+    public
+    def sendWhats(*message)
+        puts "Sending whats: #{message[0]} - #{message[1]}"
+    end
 end
 phone3.ringtone();
 #phone3.alarm();
 #phone3.message()
+phone3.sendWhats();
+phone3.sendWhats("test")
+phone3.sendWhats("test", "test2")
