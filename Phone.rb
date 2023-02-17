@@ -11,19 +11,6 @@ class Phone
         puts @model + " - " + @color + " is calling..."
     end
 
-    # private
-    private
-    def alarm()
-        puts "This is an alarm"
-    end
-
-    # protected
-    protected
-    def message()
-        puts "Sending a message"
-    end
-
-    public
     # getters and setters
     def model
         return @model
@@ -82,3 +69,24 @@ smartPhone1.uninstall_app();
 
 # smartPhone1.alarm();
 # smartPhone1.message();
+
+class Phone
+    def ringtone
+        puts "Ringtone is playing"
+    end
+
+    # private
+    private
+    def alarm()
+        puts "This is an alarm"
+    end
+
+    # protected
+    protected
+    def message()
+        puts "Sending a message"
+    end
+end
+phone3.ringtone();
+#phone3.alarm();
+#phone3.message()
