@@ -5,10 +5,25 @@ class Phone
         @color = color
     end
 
+    # public
+    public
     def call()
         puts @model + " - " + @color + " is calling..."
     end
 
+    # private
+    private
+    def alarm()
+        puts "This is an alarm"
+    end
+
+    # protected
+    protected
+    def message()
+        puts "Sending a message"
+    end
+
+    public
     # getters and setters
     def model
         return @model
@@ -64,3 +79,6 @@ smartPhone1.color = "Blue"
 smartPhone1.call();
 smartPhone1.install_app();
 smartPhone1.uninstall_app();
+
+# smartPhone1.alarm();
+# smartPhone1.message();
