@@ -91,10 +91,21 @@ class Phone
     def sendWhats(*message)
         puts "Sending whats: #{message[0]} - #{message[1]}"
     end
+
+    def error_simulation()
+        begin
+            puts "Starting method"
+            raise "Fake Error"
+        rescue Exception => e
+            puts e.message
+            puts e.backtrace.inspect
+        end
+    end
 end
-phone3.ringtone();
-#phone3.alarm();
+phone3.ringtone()
+#phone3.alarm()
 #phone3.message()
-phone3.sendWhats();
+phone3.sendWhats()
 phone3.sendWhats("test")
 phone3.sendWhats("test", "test2")
+phone3.error_simulation()
