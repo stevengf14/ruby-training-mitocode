@@ -1,3 +1,6 @@
+require_relative "user_module.rb"
+require_relative "language_module.rb"
+
 class Phone
 
     def initialize(model, color)
@@ -101,6 +104,9 @@ class Phone
             puts e.backtrace.inspect
         end
     end
+    include User
+    include Language
+
 end
 phone3.ringtone()
 #phone3.alarm()
@@ -109,3 +115,5 @@ phone3.sendWhats()
 phone3.sendWhats("test")
 phone3.sendWhats("test", "test2")
 phone3.error_simulation()
+phone3.show_user()
+phone3.show_language()
