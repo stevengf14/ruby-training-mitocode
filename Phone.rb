@@ -14,6 +14,14 @@ class Phone
         puts @model + " - " + @color + " is calling..."
     end
 
+    def instance_method()
+        puts "Instance method"
+    end
+
+    def self.class_method()
+        puts "Class method"
+    end
+
     # getters and setters
     def model
         return @model
@@ -117,3 +125,7 @@ phone3.sendWhats("test", "test2")
 phone3.error_simulation()
 phone3.show_user()
 phone3.show_language()
+
+
+phone3.instance_method()
+Phone.class_method()
