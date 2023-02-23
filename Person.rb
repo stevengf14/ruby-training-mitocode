@@ -29,4 +29,4 @@ t2 = Thread.new{p.threadTest2()}
 t1.join
 t2.join
 
-puts "Ruby course finished"
+puts "Ruby course has finished"
